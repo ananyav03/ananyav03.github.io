@@ -14593,9 +14593,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#https://www.kaggle.com/datasets/kanerudolph/depression-and-academic-performance-of-students</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#CMSC320 Final Project- Ananya Vepa and Sneha Sureshanand</span>
+<span class="c1">#Data Source: https://cran.r-project.org/web/packages/Lock5withR/Lock5withR.pdf</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/ananyavepa/Documents/Fall 2022/CMSC320/Final Project/Final Project Dataset.csv&quot;</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/Users/ananyavepa/Documents/Fall 2022/CMSC320/Final Project/SleepStudy Dataset.csv&quot;</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
 <span class="n">df</span>
@@ -14639,131 +14640,149 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Gender:</th>
-      <th>Age:</th>
-      <th>Educational Level</th>
-      <th>Little interest or pleasure in doing things</th>
-      <th>Feeling down, depressed, or hopeless</th>
-      <th>Trouble falling or staying asleep, or sleeping too much</th>
-      <th>Feeling tired or having little energy</th>
-      <th>Poor appetite or overeating</th>
-      <th>Feeling bad about yourself or that you are a failure or not have let yourself or your family down</th>
-      <th>Trouble concentrating on things, such as reading the newspaper or watching television</th>
-      <th>Moving or speaking so slowly that other people could have noticed Or being so restless that you have been moving around a lot more than usual</th>
-      <th>Thoughts that you would be better off dead or of hurting yourself in some way</th>
-      <th>Do you have part-time or full-time job?</th>
-      <th>Which of the following best describes your term-time accommodation?</th>
-      <th>How many hours do you spend studying each day?</th>
-      <th>How many of the electronic gadgets (e.g. mobile phone, computer, laptop, PSP, PS4, Wii, etc.) do you have in your home or your student accommodation/mess/hall?</th>
-      <th>How many hours do you spend on social media per day?</th>
-      <th>Your Last Semester GPA:</th>
+      <th>Gender</th>
+      <th>ClassYear</th>
+      <th>LarkOwl</th>
+      <th>NumEarlyClass</th>
+      <th>EarlyClass</th>
+      <th>GPA</th>
+      <th>ClassesMissed</th>
+      <th>CognitionZscore</th>
+      <th>PoorSleepQuality</th>
+      <th>DepressionScore</th>
+      <th>...</th>
+      <th>WeekdayRise</th>
+      <th>WeekdaySleep</th>
+      <th>WeekendBed</th>
+      <th>WeekendRise</th>
+      <th>WeekendSleep</th>
+      <th>AverageSleep</th>
+      <th>AllNighter</th>
+      <th>Sex</th>
+      <th>allNighter</th>
+      <th>earlyClass</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Male</td>
-      <td>19 to 24 years</td>
-      <td>College - Bachelor's</td>
-      <td>3</td>
-      <td>2</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Neither</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.60</td>
+      <td>0</td>
+      <td>-0.26</td>
       <td>4</td>
       <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>Part time</td>
-      <td>Home (with parents)</td>
-      <td>2 - 4 hours</td>
-      <td>4 - 6</td>
-      <td>More than 4 Hours</td>
-      <td>2.30</td>
+      <td>...</td>
+      <td>8.70</td>
+      <td>7.70</td>
+      <td>25.75</td>
+      <td>9.50</td>
+      <td>5.88</td>
+      <td>7.18</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Male</td>
-      <td>19 to 24 years</td>
-      <td>College - Bachelor's</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Neither</td>
       <td>2</td>
       <td>1</td>
-      <td>2</td>
+      <td>3.24</td>
+      <td>0</td>
+      <td>1.39</td>
+      <td>6</td>
       <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Part time</td>
-      <td>University hall of residence</td>
-      <td>1 - 2 hours</td>
-      <td>1 - 3</td>
-      <td>1 - 2 Hours</td>
-      <td>2.70</td>
+      <td>...</td>
+      <td>8.20</td>
+      <td>6.80</td>
+      <td>26.00</td>
+      <td>10.00</td>
+      <td>7.25</td>
+      <td>6.93</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Female</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>No</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>1 - 3</td>
-      <td>More than 4 Hours</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Owl</td>
+      <td>0</td>
+      <td>0</td>
       <td>2.97</td>
+      <td>12</td>
+      <td>0.38</td>
+      <td>18</td>
+      <td>18</td>
+      <td>...</td>
+      <td>6.55</td>
+      <td>3.00</td>
+      <td>28.00</td>
+      <td>12.59</td>
+      <td>10.09</td>
+      <td>5.02</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>3</th>
+      <td>0</td>
+      <td>1</td>
+      <td>Lark</td>
+      <td>5</td>
+      <td>1</td>
+      <td>3.76</td>
+      <td>0</td>
+      <td>1.39</td>
+      <td>9</td>
+      <td>1</td>
+      <td>...</td>
+      <td>7.17</td>
+      <td>6.77</td>
+      <td>27.00</td>
+      <td>8.00</td>
+      <td>7.25</td>
+      <td>6.90</td>
+      <td>0</td>
       <td>Female</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
       <td>No</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>More than 6</td>
-      <td>2 - 4 Hours</td>
-      <td>2.74</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Male</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Part time</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>4 - 6</td>
-      <td>More than 4 Hours</td>
-      <td>3.37</td>
+      <td>0</td>
+      <td>4</td>
+      <td>Owl</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3.20</td>
+      <td>4</td>
+      <td>1.22</td>
+      <td>9</td>
+      <td>7</td>
+      <td>...</td>
+      <td>8.67</td>
+      <td>6.09</td>
+      <td>23.75</td>
+      <td>9.50</td>
+      <td>7.00</td>
+      <td>6.35</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>...</th>
@@ -14785,343 +14804,133 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>347</th>
-      <td>Female</td>
-      <td>19 to 24 years</td>
-      <td>College - Bachelor's</td>
-      <td>4</td>
-      <td>4</td>
-      <td>2</td>
-      <td>4</td>
+      <th>248</th>
+      <td>1</td>
       <td>3</td>
-      <td>4</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>No</td>
-      <td>Home (with parents)</td>
-      <td>2 - 4 hours</td>
-      <td>1 - 3</td>
-      <td>2 - 4 Hours</td>
-      <td>4.00</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>Female</td>
-      <td>25 years and above</td>
-      <td>College - Bachelor's</td>
-      <td>4</td>
-      <td>4</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>Full Time</td>
-      <td>Home (with parents)</td>
-      <td>More than 4 hours</td>
-      <td>1 - 3</td>
-      <td>More than 4 Hours</td>
-      <td>4.00</td>
-    </tr>
-    <tr>
-      <th>349</th>
-      <td>Female</td>
-      <td>19 to 24 years</td>
-      <td>College - Bachelor's</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-      <td>2</td>
-      <td>Full Time</td>
-      <td>Private rented accommodation</td>
-      <td>2 - 4 hours</td>
-      <td>4 - 6</td>
-      <td>2 - 4 Hours</td>
+      <td>Neither</td>
+      <td>0</td>
+      <td>0</td>
       <td>3.35</td>
-    </tr>
-    <tr>
-      <th>350</th>
-      <td>Female</td>
-      <td>25 years and above</td>
-      <td>College - Bachelor's</td>
-      <td>3</td>
-      <td>4</td>
-      <td>4</td>
-      <td>3</td>
-      <td>4</td>
-      <td>4</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>Full Time</td>
-      <td>Home (with parents)</td>
-      <td>2 - 4 hours</td>
-      <td>1 - 3</td>
-      <td>2 - 4 Hours</td>
-      <td>3.35</td>
-    </tr>
-    <tr>
-      <th>351</th>
-      <td>Female</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>3</td>
+      <td>7</td>
+      <td>0.87</td>
+      <td>11</td>
+      <td>5</td>
+      <td>...</td>
+      <td>9.42</td>
+      <td>6.77</td>
+      <td>24.50</td>
+      <td>10.50</td>
+      <td>9.50</td>
+      <td>7.55</td>
       <td>1</td>
-      <td>3</td>
-      <td>2</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
+      <td>Male</td>
+      <td>Yes</td>
       <td>No</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>More than 6</td>
-      <td>More than 4 Hours</td>
-      <td>2.30</td>
+    </tr>
+    <tr>
+      <th>249</th>
+      <td>0</td>
+      <td>1</td>
+      <td>Neither</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3.00</td>
+      <td>1</td>
+      <td>-0.32</td>
+      <td>9</td>
+      <td>8</td>
+      <td>...</td>
+      <td>8.63</td>
+      <td>9.03</td>
+      <td>24.50</td>
+      <td>10.00</td>
+      <td>9.50</td>
+      <td>9.17</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>250</th>
+      <td>0</td>
+      <td>3</td>
+      <td>Neither</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3.50</td>
+      <td>1</td>
+      <td>1.30</td>
+      <td>2</td>
+      <td>1</td>
+      <td>...</td>
+      <td>8.25</td>
+      <td>7.80</td>
+      <td>25.00</td>
+      <td>9.75</td>
+      <td>8.75</td>
+      <td>8.07</td>
+      <td>0</td>
+      <td>Female</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>251</th>
+      <td>1</td>
+      <td>2</td>
+      <td>Neither</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2.60</td>
+      <td>0</td>
+      <td>-0.29</td>
+      <td>5</td>
+      <td>1</td>
+      <td>...</td>
+      <td>9.20</td>
+      <td>8.97</td>
+      <td>26.00</td>
+      <td>9.88</td>
+      <td>7.50</td>
+      <td>8.55</td>
+      <td>0</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>252</th>
+      <td>1</td>
+      <td>2</td>
+      <td>Neither</td>
+      <td>5</td>
+      <td>1</td>
+      <td>2.50</td>
+      <td>3</td>
+      <td>-1.00</td>
+      <td>3</td>
+      <td>2</td>
+      <td>...</td>
+      <td>7.75</td>
+      <td>8.40</td>
+      <td>25.00</td>
+      <td>10.88</td>
+      <td>9.88</td>
+      <td>8.82</td>
+      <td>0</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
-<p>352 rows × 18 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Educational Level&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
-
-
-
-
-<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>array([&#34;College - Bachelor&#39;s&#34;, &#39;High School&#39;, &#39;Master&#39;], dtype=object)</pre>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Educational Level&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Educational Level&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">([</span><span class="s2">&quot;College - Bachelor&#39;s&quot;</span><span class="p">],</span> <span class="s2">&quot;Bachelor&#39;s&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Gender:</th>
-      <th>Age:</th>
-      <th>Educational Level</th>
-      <th>Little interest or pleasure in doing things</th>
-      <th>Feeling down, depressed, or hopeless</th>
-      <th>Trouble falling or staying asleep, or sleeping too much</th>
-      <th>Feeling tired or having little energy</th>
-      <th>Poor appetite or overeating</th>
-      <th>Feeling bad about yourself or that you are a failure or not have let yourself or your family down</th>
-      <th>Trouble concentrating on things, such as reading the newspaper or watching television</th>
-      <th>Moving or speaking so slowly that other people could have noticed Or being so restless that you have been moving around a lot more than usual</th>
-      <th>Thoughts that you would be better off dead or of hurting yourself in some way</th>
-      <th>Do you have part-time or full-time job?</th>
-      <th>Which of the following best describes your term-time accommodation?</th>
-      <th>How many hours do you spend studying each day?</th>
-      <th>How many of the electronic gadgets (e.g. mobile phone, computer, laptop, PSP, PS4, Wii, etc.) do you have in your home or your student accommodation/mess/hall?</th>
-      <th>How many hours do you spend on social media per day?</th>
-      <th>Your Last Semester GPA:</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Male</td>
-      <td>19 to 24 years</td>
-      <td>Bachelor's</td>
-      <td>3</td>
-      <td>2</td>
-      <td>4</td>
-      <td>4</td>
-      <td>3</td>
-      <td>3</td>
-      <td>4</td>
-      <td>3</td>
-      <td>2</td>
-      <td>Part time</td>
-      <td>Home (with parents)</td>
-      <td>2 - 4 hours</td>
-      <td>4 - 6</td>
-      <td>More than 4 Hours</td>
-      <td>2.30</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Male</td>
-      <td>19 to 24 years</td>
-      <td>Bachelor's</td>
-      <td>2</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Part time</td>
-      <td>University hall of residence</td>
-      <td>1 - 2 hours</td>
-      <td>1 - 3</td>
-      <td>1 - 2 Hours</td>
-      <td>2.70</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Female</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-      <td>No</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>1 - 3</td>
-      <td>More than 4 Hours</td>
-      <td>2.97</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Female</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>3</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-      <td>No</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>More than 6</td>
-      <td>2 - 4 Hours</td>
-      <td>2.74</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Male</td>
-      <td>18 years or less</td>
-      <td>High School</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Part time</td>
-      <td>Home (with parents)</td>
-      <td>1 - 2 hours</td>
-      <td>4 - 6</td>
-      <td>More than 4 Hours</td>
-      <td>3.37</td>
-    </tr>
-  </tbody>
-</table>
+<p>253 rows × 30 columns</p>
 </div>
 </div>
 
